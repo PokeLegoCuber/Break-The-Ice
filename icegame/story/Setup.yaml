@@ -10,6 +10,8 @@ backgrounds:
   store: assets/backgrounds/store.jpg
   mcds: assets/backgrounds/mcds.png
   clouds: assets/backgrounds/clouds.jpg
+  lincoln: assets/backgrounds/lincoln-memorial.jpg
+  end: assets/backgrounds/end.png
 characters:
   fatima:
     displayName: Fatima
@@ -18,31 +20,52 @@ characters:
       normal: assets/characters/fatima.png
       happy: assets/characters/happy_fatima.png
       asleep: assets/characters/sleeping_fatima.png
+      menacing: assets/characters/fatima-menacing.png
+      menacing-ora: assets/characters/fatima-menacing-ora.png
+  
   abuela:
     displayName: Customer
     speechColour: "#ca90cf"
     looks:
       normal: assets/characters/abuela.png
+  
   trump:
     displayName: Trump
     speechColour: "#CFB53B"
     looks:
       normal: assets/characters/trump.png
+      menacing: assets/characters/trump-menacing.png
+      menacing-ora: assets/characters/trump-menacing-ora.png
+  
   iceguy:
     displayName: ICE Officer
     speechColour: "#A5F2F3"
     looks:
       normal: assets/characters/iceman.png
+  
   icesans:
     displayName: ICE SANS
     speechColour: "#00FFCC"
     looks:
       normal: assets/characters/icesans.png 
+  
   racistlawyer:
     displayName: Racist Lawyer
     speechColour: "#FF6347"
     looks:
       normal: assets/characters/racistlawyer.png
+
+  invisible:
+    displayName: Narrator
+    speechColour: "#d5e6e7"
+    looks:
+      normal: assets/characters/nochar.png
+
+  parents:
+    displayName: Parents
+    speechColour: "#d5e6e7"
+    looks:
+      normal: assets/characters/parents.png
 
 cgs:
   phone1: assets/objects/phone1.png

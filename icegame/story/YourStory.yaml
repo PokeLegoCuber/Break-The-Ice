@@ -1,8 +1,7 @@
-var health: 3
-
 
 start:
   - play morningBGM:
+  - var health: 3
   - show room: WITH FADE
   - show fatima: happy AT CENTER WITH FADE
   - fatima says: Hi, I'm home from school!
@@ -14,18 +13,19 @@ start:
 
 enterDream:
   - show clouds: WITH FADE CONTINUE
+  - show invisible: normal
   - show fatima: asleep AT CENTER WITH FADE
   - fatima says: zzzZZZZZzzzzz....
   - hide ALL:
   - effect SHOWTITLE: 
     title: Fatima Dozes Off
-    subtitle: Nightmare - Meeting ICE Agent 1
+    subtitle: Meeting ICE Agent 
   - show school_afternoon: WITH FADE
   - show fatima: AT LEFT WITH FADE
   - fatima says: I have so much homework to do, as well as my job at McDonald's that I need to head to right now...
   - show iceguy: normal AT RIGHT WITH FADE
   - iceguy says: Miss, may I see your ID?
-  - fatima says: Why?
+  - fatima says: Huh, why?
   - iceguy says: I am an ICE agent and am looking to confirm your US citizenship.
   - choice:
     - Here you go!:
@@ -35,18 +35,24 @@ enterDream:
         - iceguy says: Come with me right now!
         - fatima says: No, please!
         - var health: "{health} - 1"
+        - invisible says: "Fatima has {health} left."
     - Lie:
         - fatima says: I'm sorry sir, I only have my school ID.
         - iceguy says: Ahh, let me take a look at that.
         - iceguy says: Ok, that's fine. Carry on.
         - fatima says: Phew...
+        - invisible says: "Fatima has {health} left."
   - hide ALL:
+  - scene: Chapter2
+
+Chapter2:
   - effect SHOWTITLE:
-    title: Nightmare 2 
+    title: Chapter 2
     subtitle: Meeting Aaron Schlossberg
   - show mcds: WITH FADE
   - show fatima: AT LEFT WITH FADE
   - show abuela: AT CENTER WITH FADE
+  - show invisible: normal
   - fatima says happy: Hi, how may I help you?
   - abuela says: Hola, ¿puedo tener un cuarto de libra?
   - show racistlawyer: AT RIGHT WITH FADE
@@ -64,9 +70,126 @@ enterDream:
       - iceguy says: Miss, show me your paperwork otherwise you'll have to come with me.
       - fatima says: Nooo, please!
       - var health: "{health} - 1"
+      - invisible says: "Fatima has {health} left."
     - Maintain good customer service:
       - fatima says: Sir, I will take your order as soon as I finish this one. Please step back in line.
       - racistlawyer says: You should tell her to learn how to speak English. 
       - fatima says: . . . . .
+      - invisible says: "Fatima has {health} left."
   - hide ALL: WITH FADE
-  - scene: storySetup
+  - show room: WITH FADE
+  - show fatima: AT LEFT WITH FADE
+  - fatima says: Mom! Dad! I'm home!
+  - fatima says: Hello?
+  - show invisible: normal
+  - invisible says: Fatima soon realized her parents weren't home and found a note stating that an arrest was made earlier in the day.
+  - invisible says: Though there was an odd option of getting her parents back.
+  - invisible says: The note stated that she would need to confront someone at the Lincoln Memorial in order to save her parents.
+  - fatima says: Oh no! Well I gotta do what I gotta do to get my family back! 
+  - hide ALL: WITH FADE
+  - scene: Chapter3
+
+Chapter3:
+  - effect SHOWTITLE:
+    title: Chapter 3
+    subtitle: One odd ICE Agent
+  - show invisible: normal
+  - show store:
+  - show fatima: normal AT LEFT WITH FADE
+  - fatima says: Don't worry Mom and Dad! I'm coming to save you!
+  - show icesans: AT RIGHT WITH FADE
+  - icesans says: Oa oa oa oa oa oa oa oa oa oa oa oa oa 
+  - fatima says: Huh?
+  - icesans says: Trying to run from the government agents is not very cash money.
+  - icesans says: Especially from an illegal immigrant like you!
+  - fatima says: I think you got the wrong person...
+  - icesans says: Let me take a look at your ID then!
+  - fatima says: Woah hold up!
+  - invisible says: Sans approaches Fatima but slowly cause he has short legs
+  - icesans says: I'mma get you!
+  - choice:
+    - Just fast walk away:
+      - fatima says: Well, see yah around!
+      - icesans says: WAIT RIGHT THERE (wheezes) I NEED TO CH-CHECK YOUR ID!
+      - invisible says: Fatima simply fled the scene.
+      - invisible says: "Fatima has {health} left."
+    - Stand and wait for him to walk up to you:
+      - invisible says: Fatima waits until Sans got close enoguh so she can attempt to punt him
+      - fatima says: HI-YA!
+      - invisible says: Although he was slow at walking, all of his body limbs are rather nimble
+      - icesans says: Got you!
+      - var health: "{health} - 1"
+      - invisible says: "Fatima has {health} left."
+      - if ({health < 1}):
+        - hide ALL: WITH FADE
+        - show invisible: normal
+        - invisible says: You weren't able to save Fatima's family
+        - scene: ending2
+  - scene: Chapter4
+
+Chapter4:
+  - effect SHOWTITLE:
+    title: Chapter 4
+    subtitle: The Final Battle
+  - show invisible: normal
+  - show lincoln:
+  - show fatima: normal AT LEFT WITH FADE
+  - fatima says: That was a weird ICE officer?
+  - fatima says: Since I'm here in Washington DC, time to rescue my parents!
+  - show trump: normal
+  - trump says: FATIMA!
+  - show trump: menacing
+  - fatima says: TRUMP!
+  - show fatima: menacing
+  - trump says: Oh ho, you're approaching me?
+  - fatima says: I can't beat the shit out of you and save my parents without getting closer.
+  - trump says: Ho, then comes as close as you like!
+  - show fatima: menacing-ora
+  - fatima says: ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA!
+  - show trump: menacing-ora
+  - trump says: ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA!
+  - invisible says: The battle was fierce but in the end Fatima was able to defeat Donald Trump.
+  - fatima says: Now stay down!
+  - trump says: Uhhhhhh....
+  - hide trump:
+  - show parents: normal
+  - parents says: Fatima!
+  - fatima says: Mom! Dad!
+  - parents says: It's time to go!
+  - fatima says: Of course.
+  - parents says: It's time to go now!
+  - fatima says: Huh?
+  - parents says: Time to go.....
+  - hide ALL:
+  - scene: ending1
+
+ending1:
+  - effect SHOWTITLE:
+    title: Ending
+  - show invisible: normal
+  - invisible says: Fatima wakes up and realizes that her nap has turned into a full night's slumber, and it is time to go back to school.
+  - show room:
+  - show fatima: normal AT LEFT WIH FADE
+  - show parents: normal AT RIGHT WIH FADE
+  - parents says: It's time to go to school!
+  - fatima says: Oh.... it was just a dream. Mom, dad, I'm so glad you're ok, I had a terrible nightmare.
+  - parents says: It's ok, we won't let anything bad happen to you. Now come on and get to school, you'll be late and we need to get to work as well!
+  - fatima says: Ok . . .
+  - hide ALL:
+  - show end:
+
+ending2:
+  - effect SHOWTITLE:
+    title: Ending
+  - show invisible: normal
+  - invisible says: Fatima wakes in fear, startling her parents.
+  - show room:
+  - show fatima: normal AT LEFT WIH FADE
+  - show parents: normal AT RIGHT WIH FADE
+  - fatima says: AHHHHHHHH!
+  - parents says: WHAT HAPPENED?
+  - fatima says: MOM! DAD! TRUMP IS COMING FOR YOU!
+  - parents says: Noooo, it's ok, we're ok. You're ok.
+  - invisible says: Fatima takes a few seconds to breathe and realizes that she is in her bed, and her nap lasted too long. She goes starts her day, heading to school paranoid.
+  - hide ALL:
+  - show end:

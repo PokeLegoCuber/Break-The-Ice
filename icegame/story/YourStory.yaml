@@ -12,6 +12,7 @@ start:
   - scene: enterDream
 
 enterDream:
+  - play desolation:
   - show clouds: WITH FADE CONTINUE
   - show invisible: normal
   - show fatima: asleep AT CENTER WITH FADE

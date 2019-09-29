@@ -8,12 +8,21 @@ backgrounds:
   street_morning: assets/backgrounds/school_front_morning.jpg
   street_afternoon: assets/backgrounds/school_front_afternoon.jpg
   store: assets/backgrounds/store.jpg
+  mcds: assets/backgrounds/mcds.png
+  clouds: assets/backgrounds/clouds.jpg
 characters:
   fatima:
     displayName: Fatima
     speechColour: "#ca90cf"
     looks:
       normal: assets/characters/fatima.png
+      happy: assets/characters/happy_fatima.png
+      asleep: assets/characters/sleeping_fatima.png
+  abuela:
+    displayName: Customer
+    speechColour: "#ca90cf"
+    looks:
+      normal: assets/characters/abuela.png
   trump:
     displayName: Trump
     speechColour: "#CFB53B"
@@ -30,8 +39,8 @@ characters:
     looks:
       normal: assets/characters/icesans.png 
   racistlawyer:
-    displayName: Aaron Schlossberg
-    speechColour: "#CFB53B"
+    displayName: Racist Lawyer
+    speechColour: "#FF6347"
     looks:
       normal: assets/characters/racistlawyer.png
 

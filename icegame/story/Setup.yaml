@@ -9,34 +9,31 @@ backgrounds:
   street_afternoon: assets/backgrounds/school_front_afternoon.jpg
   store: assets/backgrounds/store.jpg
 characters:
-  deuzi:
-    displayName: Deuzilene
+  fatima:
+    displayName: Fatima
     speechColour: "#ca90cf"
     looks:
-      normal: assets/characters/Char3NormalSchool.png
-      happy: assets/characters/Char3HappySchool.png
-      angry: assets/characters/Char3AngrySchool.png
-      normalC: assets/characters/Char3Normal.png
-      happyC: assets/characters/Char3Happy.png
-      angryC: assets/characters/Char3Angry.png
-
+      normal: assets/characters/fatima.png
   trump:
     displayName: Trump
     speechColour: "#CFB53B"
-      looks:
-        menacing: assets/characters/trump.png
-
+    looks:
+      normal: assets/characters/trump.png
   iceguy:
     displayName: ICE Officer
     speechColour: "#A5F2F3"
-      looks:
-        normal: assets/characters/iceman.png
-
+    looks:
+      normal: assets/characters/iceman.png
   icesans:
     displayName: ICE SANS
     speechColour: "#00FFCC"
-      looks:
-        normal: assets/characters/icesans.png 
+    looks:
+      normal: assets/characters/icesans.png 
+  racistlawyer:
+    displayName: Aaron Schlossberg
+    speechColour: "#CFB53B"
+    looks:
+      normal: assets/characters/racistlawyer.png
 
 cgs:
   phone1: assets/objects/phone1.png

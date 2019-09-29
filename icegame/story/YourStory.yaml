@@ -2,86 +2,78 @@
 start:
   - play morningBGM:
   - show street_morning: WITH FADE
-  - show deuzi: normal AT CENTER WITH FADE
-  - deuzi says: Hello, are you the new student?
-  - deuzi says happy: Welcome to our Tutorial Game!
-  - deuzi says: My name is Deuzilene and I'll be your guide.
-  - deuzi says normal: So you want to make a Visual Novel?
-  - deuzi says: With RenJS you can easily make games just like this one.
-  - deuzi says: RenJS is inspired by Ren'Py and based on PhaserJS.
-  - deuzi says: If you are familiar with any of those you have an advantage.
-  - deuzi says: And if not...
-  - deuzi says happy: No problem!
-  - deuzi says: RenJS is made so the text of your story is written intuitively like a movie script.
-  - deuzi says normal: Once you learn the structure, there's no limit to what you can create.
-  - deuzi says: Let's get inside and start right away.
+  - show fatima: normal AT CENTER WITH FADE
+  - fatima says: Hi, I'm Fatima, 14 years old and separated from my parents.
+  - fatima says: ICE swarmed my apartment in New York City, and arrested my parents.
+  - fatima says: My mom and dad are undocumented immigrants from Pakistan.
+  - fatima says: I am now beginning my quest to search for them before it's too late...
   - hide ALL:
   - scene: enterSchool
 
 enterSchool:
   - show school_morning: WITH FADE CONTINUE
-  - show deuzi: WITH FADE
-  - deuzi says: Are you ready?
+  - show fatima: WITH FADE
+  - fatima says: Are you ready?
   - effect SHOWTITLE: 
     title: Chapter 1
     subtitle: The basics 
-  - deuzi says: First things first, let's see what we need to start.
-  - deuzi says: RenJS doesn't come or is tied to any particular IDE (integrated development environment).
-  - deuzi says: That is, a program to read and edit the files of the game, like your story script.
-  - deuzi says: It doesn't have to be anything big or expensive.
-  - deuzi says happy: For example, my favourite is Sublime Text, a free lightweight and multiplatform text editor.
-  - deuzi says normal: Another thing you will need is RenJS itself.
-  - deuzi says: RenJS is a library that will manage the flow, assets and interactivity of your game.
-  - deuzi says: And finally, you will need your game script, in a way that the library can understand.
-  - deuzi says: As a study case, we will use this same game you're playing right now.
-  - deuzi says: You can find a link to download it in this same page, probably.
-  - deuzi says: The game files will include both the library and the script for the Tutorial Game.
-  - deuzi says: So, have you downloaded it yet?
+  - fatima says: First things first, let's see what we need to start.
+  - fatima says: RenJS doesn't come or is tied to any particular IDE (integrated development environment).
+  - fatima says: That is, a program to read and edit the files of the game, like your story script.
+  - fatima says: It doesn't have to be anything big or expensive.
+  - fatima says happy: For example, my favourite is Sublime Text, a free lightweight and multiplatform text editor.
+  - fatima says normal: Another thing you will need is RenJS itself.
+  - fatima says: RenJS is a library that will manage the flow, assets and interactivity of your game.
+  - fatima says: And finally, you will need your game script, in a way that the library can understand.
+  - fatima says: As a study case, we will use this same game you're playing right now.
+  - fatima says: You can find a link to download it in this same page, probably.
+  - fatima says: The game files will include both the library and the script for the Tutorial Game.
+  - fatima says: So, have you downloaded it yet?
   - choice:
     - I have it!:
-      - deuzi says happy: Great! What a hardworking student!
+      - fatima says happy: Great! What a hardworking student!
     - Not yet:
-      - show deuzi: angry
-      - deuzi says angry: What are you waiting for!?
-      - deuzi says normal: Go do it, I'll wait...
+      - show fatima: angry
+      - fatima says angry: What are you waiting for!?
+      - fatima says normal: Go do it, I'll wait...
       - choice:
         - I have it!:
-          - deuzi says happy: Good! Let's continue.
-  - deuzi says normal: Now, open the root folder of this game.
-  - deuzi says: It should look like this.
-  - show deuzi: AT LEFT WITH MOVE CONTINUE
+          - fatima says happy: Good! Let's continue.
+  - fatima says normal: Now, open the root folder of this game.
+  - fatima says: It should look like this.
+  - show fatima: AT LEFT WITH MOVE CONTINUE
   - show folders: AT 550,300 WITH FADE
-  - deuzi says: There are four folders and a file.
-  - deuzi says: RenJS is web based, that means the game runs as a webpage.
-  - deuzi says: index.html is the page that contains this game.
-  - deuzi says: You can play the game locally by opening this file with a web browser.
-  - deuzi says: The folder named RenJS is where the engine's files are located.
-  - deuzi says: And the folder libs contains the engine's external dependencies, like PhaserJS.
-  - deuzi says: If you're making a simple game, you shouldn't worry about any of this.
-  - deuzi says: The files that concern you as a writer are inside the Story folder.
-  - deuzi says: These YAML files are what you will use to make your game.
-  - deuzi says: YAML is a human readable data serialization language.
-  - deuzi says: That means that the files contain data in a structure that you can read and write easily.
-  - deuzi says: In any case, the most important thing about YAML files is that indentation is super important.
-  - deuzi says: If you screw up the indentation the game won't even load!
-  - deuzi says angry: So be very careful about it. Only two spaces per level!
+  - fatima says: There are four folders and a file.
+  - fatima says: RenJS is web based, that means the game runs as a webpage.
+  - fatima says: index.html is the page that contains this game.
+  - fatima says: You can play the game locally by opening this file with a web browser.
+  - fatima says: The folder named RenJS is where the engine's files are located.
+  - fatima says: And the folder libs contains the engine's external dependencies, like PhaserJS.
+  - fatima says: If you're making a simple game, you shouldn't worry about any of this.
+  - fatima says: The files that concern you as a writer are inside the Story folder.
+  - fatima says: These YAML files are what you will use to make your game.
+  - fatima says: YAML is a human readable data serialization language.
+  - fatima says: That means that the files contain data in a structure that you can read and write easily.
+  - fatima says: In any case, the most important thing about YAML files is that indentation is super important.
+  - fatima says: If you screw up the indentation the game won't even load!
+  - fatima says angry: So be very careful about it. Only two spaces per level!
   - hide folders: WITH FADE CONTINUE
-  - show deuzi: AT CENTER WITH MOVE
-  - deuzi says normal: Ok, that was a lot of information, don't you think?
+  - show fatima: AT CENTER WITH MOVE
+  - fatima says normal: Ok, that was a lot of information, don't you think?
   - choice:
     - Yes, I'm already tired:
-      - show deuzi: happy
-      - deuzi says: I was hoping you'd say that!
-      - deuzi says: You can save from the quick menu here on the side and return later!
+      - show fatima: happy
+      - fatima says: I was hoping you'd say that!
+      - fatima says: You can save from the quick menu here on the side and return later!
     - No, I want to know more:
-      - show deuzi: happy
-      - deuzi says: I knew it!
-      - deuzi says: I have a feeling you're not stopping until you write your first story
-      - deuzi says: Isn't that exciting?
-  - show deuzi: normal
-  - deuzi says: All right, I'm going to take a break anyways.
-  - deuzi says: But I'm leaving you in good hands.
-  - show deuzi: happy
-  - deuzi says: Good luck!
-  - hide deuzi: WITH FADE
+      - show fatima: happy
+      - fatima says: I knew it!
+      - fatima says: I have a feeling you're not stopping until you write your first story
+      - fatima says: Isn't that exciting?
+  - show fatima: normal
+  - fatima says: All right, I'm going to take a break anyways.
+  - fatima says: But I'm leaving you in good hands.
+  - show fatima: happy
+  - fatima says: Good luck!
+  - hide fatima: WITH FADE
   - scene: storySetup

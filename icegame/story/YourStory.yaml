@@ -1,79 +1,72 @@
+var health: 3
+
 
 start:
   - play morningBGM:
-  - show street_morning: WITH FADE
-  - show fatima: normal AT CENTER WITH FADE
-  - fatima says: Hi, I'm Fatima, 14 years old and separated from my parents.
-  - fatima says: ICE swarmed my apartment in New York City, and arrested my parents.
-  - fatima says: My mom and dad are undocumented immigrants from Pakistan.
-  - fatima says: I am now beginning my quest to search for them before it's too late...
+  - show room: WITH FADE
+  - show fatima: happy AT CENTER WITH FADE
+  - fatima says: Hi, I'm home from school!
+  - fatima says: My name is Fatima, and I'm 14 years old.
+  - fatima says: I live in NYC, but emigrated from Pakistan with my parents.
+  - fatima says: I have a lot of homework, but I'm tired so I think I'll take a nap.
   - hide ALL:
-  - scene: enterSchool
+  - scene: enterDream
 
-enterSchool:
-  - show school_morning: WITH FADE CONTINUE
-  - show fatima: WITH FADE
-  - fatima says: Are you ready?
+enterDream:
+  - show clouds: WITH FADE CONTINUE
+  - show fatima: asleep AT CENTER WITH FADE
+  - fatima says: zzzZZZZZzzzzz....
+  - hide ALL:
   - effect SHOWTITLE: 
-    title: Chapter 1
-    subtitle: The basics 
-  - fatima says: First things first, let's see what we need to start.
-  - fatima says: RenJS doesn't come or is tied to any particular IDE (integrated development environment).
-  - fatima says: That is, a program to read and edit the files of the game, like your story script.
-  - fatima says: It doesn't have to be anything big or expensive.
-  - fatima says happy: For example, my favourite is Sublime Text, a free lightweight and multiplatform text editor.
-  - fatima says normal: Another thing you will need is RenJS itself.
-  - fatima says: RenJS is a library that will manage the flow, assets and interactivity of your game.
-  - fatima says: And finally, you will need your game script, in a way that the library can understand.
-  - fatima says: As a study case, we will use this same game you're playing right now.
-  - fatima says: You can find a link to download it in this same page, probably.
-  - fatima says: The game files will include both the library and the script for the Tutorial Game.
-  - fatima says: So, have you downloaded it yet?
+    title: Fatima Dozes Off
+    subtitle: Nightmare - Meeting ICE Agent 1
+  - show school_afternoon: WITH FADE
+  - show fatima: AT LEFT WITH FADE
+  - fatima says: I have so much homework to do, as well as my job at McDonald's that I need to head to right now...
+  - show iceguy: normal AT RIGHT WITH FADE
+  - iceguy says: Miss, may I see your ID?
+  - fatima says: Why?
+  - iceguy says: I am an ICE agent and am looking to confirm your US citizenship.
   - choice:
-    - I have it!:
-      - fatima says happy: Great! What a hardworking student!
-    - Not yet:
-      - show fatima: angry
-      - fatima says angry: What are you waiting for!?
-      - fatima says normal: Go do it, I'll wait...
-      - choice:
-        - I have it!:
-          - fatima says happy: Good! Let's continue.
-  - fatima says normal: Now, open the root folder of this game.
-  - fatima says: It should look like this.
-  - show fatima: AT LEFT WITH MOVE CONTINUE
-  - show folders: AT 550,300 WITH FADE
-  - fatima says: There are four folders and a file.
-  - fatima says: RenJS is web based, that means the game runs as a webpage.
-  - fatima says: index.html is the page that contains this game.
-  - fatima says: You can play the game locally by opening this file with a web browser.
-  - fatima says: The folder named RenJS is where the engine's files are located.
-  - fatima says: And the folder libs contains the engine's external dependencies, like PhaserJS.
-  - fatima says: If you're making a simple game, you shouldn't worry about any of this.
-  - fatima says: The files that concern you as a writer are inside the Story folder.
-  - fatima says: These YAML files are what you will use to make your game.
-  - fatima says: YAML is a human readable data serialization language.
-  - fatima says: That means that the files contain data in a structure that you can read and write easily.
-  - fatima says: In any case, the most important thing about YAML files is that indentation is super important.
-  - fatima says: If you screw up the indentation the game won't even load!
-  - fatima says angry: So be very careful about it. Only two spaces per level!
-  - hide folders: WITH FADE CONTINUE
-  - show fatima: AT CENTER WITH MOVE
-  - fatima says normal: Ok, that was a lot of information, don't you think?
+    - Here you go!:
+        - fatima says: Yes, here you go.
+        - iceguy says: Miss, you will have to come with me. You do not belong here.
+        - fatima says: Please, sir, I am not causing any trouble.
+        - iceguy says: Come with me right now!
+        - fatima says: No, please!
+        - var health: "{health} - 1"
+    - Lie:
+        - fatima says: I'm sorry sir, I only have my school ID.
+        - iceguy says: Ahh, let me take a look at that.
+        - iceguy says: Ok, that's fine. Carry on.
+        - fatima says: Phew...
+  - hide ALL:
+  - effect SHOWTITLE:
+    title: Nightmare 2 
+    subtitle: Meeting Aaron Schlossberg
+  - show mcds: WITH FADE
+  - show fatima: AT LEFT WITH FADE
+  - show abuela: AT CENTER WITH FADE
+  - fatima says happy: Hi, how may I help you?
+  - abuela says: Hola, ¿puedo tener un cuarto de libra?
+  - show racistlawyer: AT RIGHT WITH FADE
+  - fatima says happy: Sí, le gustaría una bebida con eso?
+  - abuela says: Si, gracias.
+  - racistlawyer says: WHY DON'T YOU SPEAK ENGLISH? ThIs Is AmErIcA!!!!1111oneoneone
+  - fatima says normal: Excuse me sir, please step back.
+  - racistlawyer says: This is ridiculous, are you even a citizen?
   - choice:
-    - Yes, I'm already tired:
-      - show fatima: happy
-      - fatima says: I was hoping you'd say that!
-      - fatima says: You can save from the quick menu here on the side and return later!
-    - No, I want to know more:
-      - show fatima: happy
-      - fatima says: I knew it!
-      - fatima says: I have a feeling you're not stopping until you write your first story
-      - fatima says: Isn't that exciting?
-  - show fatima: normal
-  - fatima says: All right, I'm going to take a break anyways.
-  - fatima says: But I'm leaving you in good hands.
-  - show fatima: happy
-  - fatima says: Good luck!
-  - hide fatima: WITH FADE
+    - Put Schlossberg in his place:
+      - hide abuela: WITH FADE
+      - fatima says: Sir, you need to leave now otherwise I am calling the cops.
+      - racistlawyer says: Don't worry about that honey, I'm calling ICE.
+      - show iceguy: AT CENTER WITH FADE
+      - iceguy says: Miss, show me your paperwork otherwise you'll have to come with me.
+      - fatima says: Nooo, please!
+      - var health: "{health} - 1"
+    - Maintain good customer service:
+      - fatima says: Sir, I will take your order as soon as I finish this one. Please step back in line.
+      - racistlawyer says: You should tell her to learn how to speak English. 
+      - fatima says: . . . . .
+  - hide ALL: WITH FADE
   - scene: storySetup

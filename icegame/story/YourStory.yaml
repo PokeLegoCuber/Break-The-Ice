@@ -88,6 +88,7 @@ Chapter2:
   - invisible says: The note stated that she would need to confront someone at the Lincoln Memorial in order to save her parents.
   - fatima says: Oh no! Well I gotta do what I gotta do to get my family back! 
   - hide ALL: WITH FADE
+  - stop desolation:
   - scene: Chapter3
 
 Chapter3:
@@ -99,6 +100,7 @@ Chapter3:
   - show fatima: normal AT LEFT WITH FADE
   - fatima says: Don't worry Mom and Dad! I'm coming to save you!
   - show icesans: AT RIGHT WITH FADE
+  - play mega:
   - icesans says: Oa oa oa oa oa oa oa oa oa oa oa oa oa 
   - fatima says: Huh?
   - icesans says: Trying to run from the government agents is not very cash money.
@@ -126,6 +128,7 @@ Chapter3:
         - show invisible: normal
         - invisible says: You weren't able to save Fatima's family
         - scene: ending2
+  - stop mega:
   - scene: Chapter4
 
 Chapter4:
@@ -137,7 +140,8 @@ Chapter4:
   - show fatima: normal AT LEFT WITH FADE
   - fatima says: That was a weird ICE officer?
   - fatima says: Since I'm here in Washington DC, time to rescue my parents!
-  - show trump: normal
+  - show trump: normal AT RIGHT WITH FADE
+  - play jojo:
   - trump says: FATIMA!
   - show trump: menacing
   - fatima says: TRUMP!
@@ -153,6 +157,7 @@ Chapter4:
   - fatima says: Now stay down!
   - trump says: Uhhhhhh....
   - hide trump:
+  - stop jojo:
   - show parents: normal
   - parents says: Fatima!
   - fatima says: Mom! Dad!

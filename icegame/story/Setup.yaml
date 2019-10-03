@@ -11,6 +11,7 @@ backgrounds:
   mcds: assets/backgrounds/mcds.png
   clouds: assets/backgrounds/clouds.jpg
   lincoln: assets/backgrounds/lincoln-memorial.jpg
+  encounter: assets/backgrounds/fatimavstrump.png
   end: assets/backgrounds/end.png
 characters:
   fatima:

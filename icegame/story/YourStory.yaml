@@ -36,13 +36,13 @@ enterDream:
         - iceguy says: Come with me right now!
         - fatima says: No, please!
         - var health: "{health} - 1"
-        - invisible says: "Fatima has {health} left."
+        - invisible says: "Fatima has {health} health left."
     - Lie:
         - fatima says: I'm sorry sir, I only have my school ID.
         - iceguy says: Ahh, let me take a look at that.
         - iceguy says: Ok, that's fine. Carry on.
         - fatima says: Phew...
-        - invisible says: "Fatima has {health} left."
+        - invisible says: "Fatima has {health} health left."
   - hide ALL:
   - scene: Chapter2
 
@@ -71,12 +71,12 @@ Chapter2:
       - iceguy says: Miss, show me your paperwork otherwise you'll have to come with me.
       - fatima says: Nooo, please!
       - var health: "{health} - 1"
-      - invisible says: "Fatima has {health} left."
+      - invisible says: "Fatima has {health} health left."
     - Maintain good customer service:
       - fatima says: Sir, I will take your order as soon as I finish this one. Please step back in line.
       - racistlawyer says: You should tell her to learn how to speak English. 
       - fatima says: . . . . .
-      - invisible says: "Fatima has {health} left."
+      - invisible says: "Fatima has {health} health left."
   - hide ALL: WITH FADE
   - show room: WITH FADE
   - show fatima: AT LEFT WITH FADE
@@ -117,13 +117,14 @@ Chapter3:
       - invisible says: Fatima simply fled the scene.
       - invisible says: "Fatima has {health} left."
     - Stand and wait for him to walk up to you:
-      - invisible says: Fatima waits until Sans got close enoguh so she can attempt to punt him
+      - invisible says: Fatima waits until Sans got close enough so she can attempt to punt him
       - fatima says: HI-YA!
       - invisible says: Although he was slow at walking, all of his body limbs are rather nimble
       - icesans says: Got you!
       - var health: "{health} - 1"
-      - invisible says: "Fatima has {health} left."
-      - if ({health < 1}):
+      - invisible says: "Fatima has {health} health left."
+      - if ({health} < 1):
+        - stop mega:
         - hide ALL: WITH FADE
         - show invisible: normal
         - invisible says: You weren't able to save Fatima's family
@@ -149,6 +150,14 @@ Chapter4:
   - trump says: Oh ho, you're approaching me?
   - fatima says: I can't beat the shit out of you and save my parents without getting closer.
   - trump says: Ho, then comes as close as you like!
+  - hide ALL:
+  - show encounter:
+  - wait: click
+  - hide encounter:
+  - show invisible: normal
+  - show lincoln:
+  - show fatima: menacing AT LEFT WITH FADE
+  - show trump: menacing AT RIGHT WITH FADE
   - show fatima: menacing-ora
   - fatima says: ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA!
   - show trump: menacing-ora

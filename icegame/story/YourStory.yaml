@@ -99,7 +99,7 @@ Chapter3:
   - show store:
   - show fatima: normal AT LEFT WITH FADE
   - fatima says: Don't worry Mom and Dad! I'm coming to save you!
-  - show icesans: AT RIGHT WITH FADE
+  - show icesans: AT 625,450 WITH FADE
   - play mega:
   - icesans says: Oa oa oa oa oa oa oa oa oa oa oa oa oa 
   - fatima says: Huh?
@@ -115,7 +115,7 @@ Chapter3:
       - fatima says: Well, see yah around!
       - icesans says: WAIT RIGHT THERE (wheezes) I NEED TO CH-CHECK YOUR ID!
       - invisible says: Fatima simply fled the scene.
-      - invisible says: "Fatima has {health} left."
+      - invisible says: "Fatima has {health} health left."
     - Stand and wait for him to walk up to you:
       - invisible says: Fatima waits until Sans got close enough so she can attempt to punt him
       - fatima says: HI-YA!
@@ -141,12 +141,14 @@ Chapter4:
   - show fatima: normal AT LEFT WITH FADE
   - fatima says: That was a weird ICE officer?
   - fatima says: Since I'm here in Washington DC, time to rescue my parents!
-  - show trump: normal AT RIGHT WITH FADE
+  - show trump: normal AT 582,450 WITH FADE
   - play jojo:
   - trump says: FATIMA!
   - show trump: menacing
+  - wait: click
   - fatima says: TRUMP!
   - show fatima: menacing
+  - wait: click
   - trump says: Oh ho, you're approaching me?
   - fatima says: I can't beat the shit out of you and save my parents without getting closer.
   - trump says: Ho, then comes as close as you like!
@@ -157,17 +159,18 @@ Chapter4:
   - show invisible: normal
   - show lincoln:
   - show fatima: menacing AT LEFT WITH FADE
-  - show trump: menacing AT RIGHT WITH FADE
+  - show trump: menacing AT 582,450 WITH FADE
   - show fatima: menacing-ora
   - fatima says: ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA!
   - show trump: menacing-ora
   - trump says: ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA ORA!
   - invisible says: The battle was fierce but in the end Fatima was able to defeat Donald Trump.
+  - show trump: normal 
   - fatima says: Now stay down!
   - trump says: Uhhhhhh....
-  - hide trump:
+  - hide trump: WITH FADE
   - stop jojo:
-  - show parents: normal
+  - show parents: normal AT 650,450 WITH FADE
   - parents says: Fatima!
   - fatima says: Mom! Dad!
   - parents says: It's time to go!
@@ -185,7 +188,7 @@ ending1:
   - invisible says: Fatima wakes up and realizes that her nap has turned into a full night's slumber, and it is time to go back to school.
   - show room:
   - show fatima: normal AT LEFT WIH FADE
-  - show parents: normal AT RIGHT WIH FADE
+  - show parents: normal AT 650,450 WITH FADE
   - parents says: It's time to go to school!
   - fatima says: Oh.... it was just a dream. Mom, dad, I'm so glad you're ok, I had a terrible nightmare.
   - parents says: It's ok, we won't let anything bad happen to you. Now come on and get to school, you'll be late and we need to get to work as well!
@@ -200,11 +203,12 @@ ending2:
   - invisible says: Fatima wakes in fear, startling her parents.
   - show room:
   - show fatima: normal AT LEFT WIH FADE
-  - show parents: normal AT RIGHT WIH FADE
+  - show parents: normal AT 650,450 WITH FADE
   - fatima says: AHHHHHHHH!
   - parents says: WHAT HAPPENED?
   - fatima says: MOM! DAD! TRUMP IS COMING FOR YOU!
   - parents says: Noooo, it's ok, we're ok. You're ok.
-  - invisible says: Fatima takes a few seconds to breathe and realizes that she is in her bed, and her nap lasted too long. She goes starts her day, heading to school paranoid.
+  - invisible says: Fatima takes a few seconds to breathe and realizes that she is in her bed, and her nap lasted too long.
+  - invisible says: She goes starts her day, heading to school paranoid.
   - hide ALL:
   - show end:
